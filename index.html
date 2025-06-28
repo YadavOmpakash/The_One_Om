@@ -1,18 +1,57 @@
-<!DOCTYPE html>  <html>  
-<head>  
-  <title>My First Site</title>  
-  <link rel="stylesheet" href="style.css">  
-</head>  
-<body>  
-  <h1>Welcome Om!</h1>  
-  <p>This is a demo website using HTML, CSS, JS, and PHP.</p>  
-  <button onclick="sayHi()">Click Me</button>  
-  <p id="result"></p>  
-  <form action="login.php" method="POST">  
-    <input type="text" name="username" placeholder="Enter Username" required><br>  
-    <input type="password" name="password" placeholder="Enter Password" required><br>  
-    <input type="submit" value="Login">  
-  </form>  
-  <script src="script.js"></script>  
-</body>  
-</html>  
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Om's Interactive Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- ✅ Navbar with Clock -->
+  <header class="navbar">
+    <h2>Om's Web App</h2>
+    <div id="clock">00:00:00</div>
+  </header>
+
+  <!-- ✅ Name Input Box -->
+  <section class="input-section">
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="addName()">Add Name</button>
+    <p id="displayName"></p>
+  </section>
+
+  <!-- ✅ Feature Boxes -->
+  <section class="boxes">
+    <div class="box">
+      <h3>Google</h3>
+      <a href="https://www.google.com" target="_blank"><button>Visit Google</button></a>
+    </div>
+    <div class="box">
+      <h3>Payment</h3>
+      <a href="https://pay.google.com" target="_blank"><button>Pay Now</button></a>
+    </div>
+    <div class="box">
+      <h3>Google Maps</h3>
+      <a href="https://maps.google.com" target="_blank"><button>Open Maps</button></a>
+    </div>
+    <div class="box">
+      <h3>Free Learning</h3>
+      <a href="https://www.freecodecamp.org" target="_blank"><button>Start Learning</button></a>
+    </div>
+  </section>
+
+  <!-- ✅ Dark Mode Toggle -->
+  <div class="center">
+    <button id="toggleTheme">🌗 Toggle Mode</button>
+  </div>
+
+  <!-- ✅ Footer with Stars -->
+  <footer>
+    <p>Made with ❤️ by Om</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </footer>
+
+</body>
+</html>
+
