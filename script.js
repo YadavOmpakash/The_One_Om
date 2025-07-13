@@ -1,32 +1,26 @@
-
-// ✅ Real-time Clock
-setInterval(() => {
-  const clock = document.getElementById("clock");
+// Clock
+function updateClock() {
   const now = new Date();
-  clock.textContent = now.toLocaleTimeString();
-}, 1000);
+  const timeString = now.toLocaleTimeString();
+  document.getElementById('clock').textContent = timeString;
+}
+setInterval(updateClock, 1000);
+updateClock();
 
-// ✅ Add Name Function
+// Add Name Function
 function addName() {
-  const name = document.getElementById("nameInput").value.trim();
-  const display = document.getElementById("displayName");
-  if (name) {
-    display.textContent = `Welcome, ${name}!`;
+  const nameInput = document.getElementById('nameInput').value;
+  const displayName = document.getElementById('displayName');
+  if (nameInput.trim() !== '') {
+    displayName.textContent = `Hello, ${nameInput}! 👋`;
   } else {
-    display.textContent = "Please enter your name.";
+    displayName.textContent = '';
   }
 }
 
-// ✅ Theme Toggle
-document.getElementById("toggleTheme").addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+// Dark Mode Toggle
+const toggleBtn = document.getElementById('toggleTheme');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
 });
-
-// ✅ Load saved theme
-window.onload = () => {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-  }
-};
 
